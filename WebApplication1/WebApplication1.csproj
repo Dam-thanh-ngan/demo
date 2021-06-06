@@ -1,0 +1,375 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{117EA257-9178-42E2-AC9F-A673488902EC}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WebApplication1</RootNamespace>
+    <AssemblyName>WebApplication1</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.7\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.7\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\KhachhangController.cs" />
+    <Compile Include="Controllers\phieuxuatController.cs" />
+    <Compile Include="Controllers\QLLTController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\backupfile.cs" />
+    <Compile Include="Models\backupfilegroup.cs" />
+    <Compile Include="Models\backupmediafamily.cs" />
+    <Compile Include="Models\backupmediaset.cs" />
+    <Compile Include="Models\backupset.cs" />
+    <Compile Include="Models\logmarkhistory.cs" />
+    <Compile Include="Models\log_shipping_monitor_alert.cs" />
+    <Compile Include="Models\log_shipping_monitor_error_detail.cs" />
+    <Compile Include="Models\log_shipping_monitor_history_detail.cs" />
+    <Compile Include="Models\log_shipping_monitor_primary.cs" />
+    <Compile Include="Models\log_shipping_monitor_secondary.cs" />
+    <Compile Include="Models\log_shipping_primaries.cs" />
+    <Compile Include="Models\log_shipping_primary_databases.cs" />
+    <Compile Include="Models\log_shipping_primary_secondaries.cs" />
+    <Compile Include="Models\log_shipping_secondaries.cs" />
+    <Compile Include="Models\log_shipping_secondary.cs" />
+    <Compile Include="Models\log_shipping_secondary_databases.cs" />
+    <Compile Include="Models\Model1.cs" />
+    <Compile Include="Models\MSdbm.cs" />
+    <Compile Include="Models\MSdbms_datatype.cs" />
+    <Compile Include="Models\MSdbms_datatype_mapping.cs" />
+    <Compile Include="Models\MSdbms_map.cs" />
+    <Compile Include="Models\restorefile.cs" />
+    <Compile Include="Models\restorefilegroup.cs" />
+    <Compile Include="Models\restorehistory.cs" />
+    <Compile Include="Models\sqlagent_info.cs" />
+    <Compile Include="Models\suspect_pages.cs" />
+    <Compile Include="Models\sysalert.cs" />
+    <Compile Include="Models\syscachedcredential.cs" />
+    <Compile Include="Models\syscategory.cs" />
+    <Compile Include="Models\syscollector_blobs_internal.cs" />
+    <Compile Include="Models\syscollector_collection_items_internal.cs" />
+    <Compile Include="Models\syscollector_collection_sets_internal.cs" />
+    <Compile Include="Models\syscollector_collector_types_internal.cs" />
+    <Compile Include="Models\syscollector_config_store_internal.cs" />
+    <Compile Include="Models\syscollector_execution_log_internal.cs" />
+    <Compile Include="Models\syscollector_execution_stats_internal.cs" />
+    <Compile Include="Models\syscollector_tsql_query_collector.cs" />
+    <Compile Include="Models\sysdac_history_internal.cs" />
+    <Compile Include="Models\sysdac_instances_internal.cs" />
+    <Compile Include="Models\sysdbmaintplan.cs" />
+    <Compile Include="Models\sysdbmaintplan_databases.cs" />
+    <Compile Include="Models\sysdbmaintplan_history.cs" />
+    <Compile Include="Models\sysdbmaintplan_jobs.cs" />
+    <Compile Include="Models\sysdownloadlist.cs" />
+    <Compile Include="Models\sysdtscategory.cs" />
+    <Compile Include="Models\sysdtspackage.cs" />
+    <Compile Include="Models\sysdtspackagelog.cs" />
+    <Compile Include="Models\sysdtssteplog.cs" />
+    <Compile Include="Models\sysdtstasklog.cs" />
+    <Compile Include="Models\sysjob.cs" />
+    <Compile Include="Models\sysjobactivity.cs" />
+    <Compile Include="Models\sysjobhistory.cs" />
+    <Compile Include="Models\sysjobschedule.cs" />
+    <Compile Include="Models\sysjobserver.cs" />
+    <Compile Include="Models\sysjobstep.cs" />
+    <Compile Include="Models\sysjobstepslog.cs" />
+    <Compile Include="Models\sysmail_account.cs" />
+    <Compile Include="Models\sysmail_attachments.cs" />
+    <Compile Include="Models\sysmail_attachments_transfer.cs" />
+    <Compile Include="Models\sysmail_configuration.cs" />
+    <Compile Include="Models\sysmail_log.cs" />
+    <Compile Include="Models\sysmail_mailitems.cs" />
+    <Compile Include="Models\sysmail_principalprofile.cs" />
+    <Compile Include="Models\sysmail_profile.cs" />
+    <Compile Include="Models\sysmail_profileaccount.cs" />
+    <Compile Include="Models\sysmail_query_transfer.cs" />
+    <Compile Include="Models\sysmail_send_retries.cs" />
+    <Compile Include="Models\sysmail_server.cs" />
+    <Compile Include="Models\sysmail_servertype.cs" />
+    <Compile Include="Models\sysmaintplan_log.cs" />
+    <Compile Include="Models\sysmaintplan_logdetail.cs" />
+    <Compile Include="Models\sysmaintplan_subplans.cs" />
+    <Compile Include="Models\sysmanagement_shared_registered_servers_internal.cs" />
+    <Compile Include="Models\sysmanagement_shared_server_groups_internal.cs" />
+    <Compile Include="Models\sysnotification.cs" />
+    <Compile Include="Models\sysoperator.cs" />
+    <Compile Include="Models\sysoriginatingserver.cs" />
+    <Compile Include="Models\syspolicy_conditions_internal.cs" />
+    <Compile Include="Models\syspolicy_configuration_internal.cs" />
+    <Compile Include="Models\syspolicy_facet_events.cs" />
+    <Compile Include="Models\syspolicy_management_facets.cs" />
+    <Compile Include="Models\syspolicy_object_sets_internal.cs" />
+    <Compile Include="Models\syspolicy_policies_internal.cs" />
+    <Compile Include="Models\syspolicy_policy_categories_internal.cs" />
+    <Compile Include="Models\syspolicy_policy_category_subscriptions_internal.cs" />
+    <Compile Include="Models\syspolicy_policy_execution_history_details_internal.cs" />
+    <Compile Include="Models\syspolicy_policy_execution_history_internal.cs" />
+    <Compile Include="Models\syspolicy_system_health_state_internal.cs" />
+    <Compile Include="Models\syspolicy_target_sets_internal.cs" />
+    <Compile Include="Models\syspolicy_target_set_levels_internal.cs" />
+    <Compile Include="Models\sysproxy.cs" />
+    <Compile Include="Models\sysproxylogin.cs" />
+    <Compile Include="Models\sysproxysubsystem.cs" />
+    <Compile Include="Models\sysschedule.cs" />
+    <Compile Include="Models\syssession.cs" />
+    <Compile Include="Models\sysssislog.cs" />
+    <Compile Include="Models\sysssispackage.cs" />
+    <Compile Include="Models\sysssispackagefolder.cs" />
+    <Compile Include="Models\syssubsystem.cs" />
+    <Compile Include="Models\systargetserver.cs" />
+    <Compile Include="Models\systargetservergroup.cs" />
+    <Compile Include="Models\systargetservergroupmember.cs" />
+    <Compile Include="Models\systaskid.cs" />
+    <Compile Include="Models\sysutility_mi_configuration_internal.cs" />
+    <Compile Include="Models\sysutility_mi_cpu_stage_internal.cs" />
+    <Compile Include="Models\sysutility_mi_dac_execution_statistics_internal.cs" />
+    <Compile Include="Models\sysutility_mi_session_statistics_internal.cs" />
+    <Compile Include="Models\sysutility_mi_smo_objects_to_collect_internal.cs" />
+    <Compile Include="Models\sysutility_mi_smo_properties_to_collect_internal.cs" />
+    <Compile Include="Models\sysutility_mi_smo_stage_internal.cs" />
+    <Compile Include="Models\sysutility_mi_volumes_stage_internal.cs" />
+    <Compile Include="Models\sysutility_ucp_aggregated_dac_health_internal.cs" />
+    <Compile Include="Models\sysutility_ucp_aggregated_mi_health_internal.cs" />
+    <Compile Include="Models\sysutility_ucp_computers_stub.cs" />
+    <Compile Include="Models\sysutility_ucp_computer_cpu_health_internal.cs" />
+    <Compile Include="Models\sysutility_ucp_configuration_internal.cs" />
+    <Compile Include="Models\sysutility_ucp_cpu_utilization_stub.cs" />
+    <Compile Include="Models\sysutility_ucp_dacs_stub.cs" />
+    <Compile Include="Models\sysutility_ucp_dac_file_space_health_internal.cs" />
+    <Compile Include="Models\sysutility_ucp_dac_health_internal.cs" />
+    <Compile Include="Models\sysutility_ucp_databases_stub.cs" />
+    <Compile Include="Models\sysutility_ucp_datafiles_stub.cs" />
+    <Compile Include="Models\sysutility_ucp_filegroups_stub.cs" />
+    <Compile Include="Models\sysutility_ucp_filegroups_with_policy_violations_internal.cs" />
+    <Compile Include="Models\sysutility_ucp_health_policies_internal.cs" />
+    <Compile Include="Models\sysutility_ucp_logfiles_stub.cs" />
+    <Compile Include="Models\sysutility_ucp_managed_instances_internal.cs" />
+    <Compile Include="Models\sysutility_ucp_mi_database_health_internal.cs" />
+    <Compile Include="Models\sysutility_ucp_mi_file_space_health_internal.cs" />
+    <Compile Include="Models\sysutility_ucp_mi_health_internal.cs" />
+    <Compile Include="Models\sysutility_ucp_mi_volume_space_health_internal.cs" />
+    <Compile Include="Models\sysutility_ucp_policy_check_conditions_internal.cs" />
+    <Compile Include="Models\sysutility_ucp_policy_target_conditions_internal.cs" />
+    <Compile Include="Models\sysutility_ucp_policy_violations_internal.cs" />
+    <Compile Include="Models\sysutility_ucp_processing_state_internal.cs" />
+    <Compile Include="Models\sysutility_ucp_space_utilization_stub.cs" />
+    <Compile Include="Models\sysutility_ucp_supported_object_types_internal.cs" />
+    <Compile Include="Models\sysutility_ucp_volumes_stub.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <None Include="Scripts\jquery-3.4.1.intellisense.js" />
+    <Content Include="Scripts\jquery-3.4.1.js" />
+    <Content Include="Scripts\jquery-3.4.1.min.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Views\Khachhang\" />
+    <Folder Include="Views\phieuxuat\" />
+    <Folder Include="Views\QLLT\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-theme.min.css.map" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <None Include="packages.config" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
+    <Content Include="Scripts\jquery-3.4.1.min.map" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>55267</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:55267/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>
